@@ -7,7 +7,7 @@ import { OrderComponent } from './sales/pages/order/order.component';
 
 const routes: Routes = [
   { path: '', component: BasicsComponent, pathMatch: 'full' },
-  { path: 'number', component: NumbersComponent },
+  { path: 'numbers', component: NumbersComponent },
   { path: 'no-commons', component: NoCommonsComponent },
   { path: 'order', component: OrderComponent },
   { path: '**', redirectTo: '' }
