@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 @Component({
   selector: 'app-no-commons',
   templateUrl: './no-commons.component.html',
   styles: [
   ]
 })
-export class NoCommonsComponent{
+export class NoCommonsComponent {
   // i18nSelect Pipe
   name: string = 'Susana';
   genre: string = 'f';
@@ -25,17 +26,17 @@ export class NoCommonsComponent{
   }
 
   // Assignments
-  changePerson(): void{
-    if(this.genre === 'm'){
+  changePerson(): void {
+    if (this.genre === 'm') {
       this.name = 'Susana';
       this.genre = 'f';
-    }else {
+    } else {
       this.name = 'Oscar';
       this.genre = 'm'
     }
   }
 
-  deleteCustomer():void {
+  deleteCustomer(): void {
     this.clients.pop();
   }
 
@@ -61,4 +62,12 @@ export class NoCommonsComponent{
       fly: false
     },
   ]
+
+  // Async pipe
+  myObservable = interval(1000);
+  myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('We have date from the promise');
+    }, 3500);
+  })
 }
