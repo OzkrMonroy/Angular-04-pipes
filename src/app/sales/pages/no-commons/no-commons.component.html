@@ -1,1 +1,58 @@
-<p>no-commons works!</p>
+<h1>Not so common pipes</h1>
+<p>Pipes included in Angular - Usually into the Common Module</p>
+
+<div class="grid">
+  <div class="col md:col-6">
+    <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
+      <p>
+        Saludos {{ name }}, es un placer
+        {{ genre | i18nSelect: invitationMap }} a nuestro evento
+      </p>
+      <button
+        pButton
+        class="p-button-outlined p-button-help"
+        label="Change person"
+        (click)="changePerson()"
+      ></button>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nPlural pipe" [toggleable]="true">
+      <p>
+        Currently, we {{ clients.length | i18nPlural: clientsMap }}.
+      </p>
+      <button
+        pButton
+        class="p-button-outlined p-button-danger"
+        label="Delete customer"
+        (click)="deleteCustomer()"
+      ></button>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Slice pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{ clients }}</pre>
+      <b>slice:0:2</b>
+      <pre>{{ clients | slice:0:2 }}</pre>
+      <b>slice:1:2</b>
+      <pre>{{ clients | slice:1:2 }}</pre>
+      <b>slice:0:4</b>
+      <pre>{{ name | slice:0:4 }}</pre>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Json pipe" [toggleable]="true">
+      <pre>{{ heroes | json }}</pre>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Key value pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          <b>{{item.key | titlecase}}:</b> {{item.value}}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+</div>
