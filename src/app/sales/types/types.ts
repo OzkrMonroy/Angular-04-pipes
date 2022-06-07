@@ -1,0 +1,1 @@
+export type sortType = 'any' | 'name' | 'fly' | 'color'

@@ -8,6 +8,7 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { MyUppercasePipe } from './pipes/myUppercase.pipe';
 import { FlyPipe } from './pipes/fly.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 
@@ -18,7 +19,8 @@ import { FlyPipe } from './pipes/fly.pipe';
     BasicsComponent,
     OrderComponent,
     MyUppercasePipe,
-    FlyPipe
+    FlyPipe,
+    SortPipe
   ],
   imports: [
     CommonModule,

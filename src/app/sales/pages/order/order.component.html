@@ -11,25 +11,33 @@
       (click)="toggleUppercase()"
       class="p-button-help mr-2"
     ></button>
-    <button pButton icon="pi pi-sort" label="By name" class="mr-2"></button>
     <button
       pButton
       icon="pi pi-sort"
-      label="Values"
+      label="By name"
+      class="mr-2"
+      (click)="changeSortValue('name')"
+    ></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Fly"
       class="p-button-success mr-2"
+      (click)="changeSortValue('fly')"
     ></button>
     <button
       pButton
       icon="pi pi-sort"
       label="By color"
       class="p-button-warning"
+      (click)="changeSortValue('color')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="grid mt-2">
   <div class="col">
-    <p-table [value]="heroes">
+    <p-table [value]="heroes | sort: sortBy">
       <ng-template pTemplate="header">
         <tr>
           <th>Name</th>
@@ -40,7 +48,7 @@
       <ng-template pTemplate="body" let-hero>
         <tr>
           <td>{{ hero.name }}</td>
-          <td>{{ hero.fly | fly | titlecase}}</td>
+          <td>{{ hero.fly | fly | titlecase }}</td>
           <td>{{ hero.color }}</td>
         </tr>
       </ng-template>

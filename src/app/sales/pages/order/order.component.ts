@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Color, Hero } from '../../interfaces/sales.interface';
+import { sortType } from '../../types/types';
 
 @Component({
   selector: 'app-order',
@@ -9,6 +10,8 @@ import { Color, Hero } from '../../interfaces/sales.interface';
 })
 export class OrderComponent {
   transformUppercase: boolean = true;
+  sortBy: sortType = 'any';
+
   heroes: Hero[] = [
     {
       name: 'Superman',
@@ -38,6 +41,10 @@ export class OrderComponent {
 
   toggleUppercase():void{
     this.transformUppercase = !this.transformUppercase
+  }
+
+  changeSortValue(value: sortType):void {
+    this.sortBy = value
   }
 
 }
