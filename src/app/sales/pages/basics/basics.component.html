@@ -31,6 +31,11 @@
         <li>Date with pipe options | date : 'MM'</li>
         <li>Date with pipe options | date : 'dd MM, yyyy'</li>
       </ul>
+      <hr>
+      <ul>
+        <li>Date with pipe options | date : 'long':'GMT-5'</li>
+        <li>Date with pipe options | date : 'long':'':'en'</li>
+      </ul>
     </p-card>
   </div>
   <div class="col-6">
@@ -42,6 +47,11 @@
         <li>{{ date | date:'long'}}</li>
         <li>{{ date | date:'MMMM'}}</li>
         <li>{{ date | date:'dd MM, yyyy'}}</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>{{ date | date:'long':'GMT-7'}}</li>
+        <li>{{ date | date:'long':'':'en'}}</li>
       </ul>
     </p-card>
   </div>
