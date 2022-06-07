@@ -7,7 +7,7 @@ import { SalesModule } from './sales/sales.module';
 import { SharedModule } from './shared/shared.module';
 
 // Change our app's local
-import es from '@angular/common/locales/es';
+import es from '@angular/common/locales/es-GT';
 import { registerLocaleData } from '@angular/common';
 
 registerLocaleData(es)
@@ -23,7 +23,7 @@ registerLocaleData(es)
     SalesModule
   ],
   providers: [{
-    provide: LOCALE_ID, useValue: 'es'
+    provide: LOCALE_ID, useValue: 'es-GT'
   }],
   bootstrap: [AppComponent]
 })
