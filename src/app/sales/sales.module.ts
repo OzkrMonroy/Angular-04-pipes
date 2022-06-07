@@ -7,6 +7,7 @@ import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { MyUppercasePipe } from './pipes/myUppercase.pipe';
+import { FlyPipe } from './pipes/fly.pipe';
 
 
 
@@ -16,7 +17,8 @@ import { MyUppercasePipe } from './pipes/myUppercase.pipe';
     NoCommonsComponent,
     BasicsComponent,
     OrderComponent,
-    MyUppercasePipe
+    MyUppercasePipe,
+    FlyPipe
   ],
   imports: [
     CommonModule,
